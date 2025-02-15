@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aizen</title>
+    <link rel="icon" href="./Content/title-logo.png" type="image/x-icon">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-black bg-black sticky-top">
+        <div class="container">
+            <!-- Logo on the left side -->
+            <a class="navbar-brand" href="#">
+                <img src="./Content/Logo.png" loading="lazy" alt="Logo" style="width: 120px;">
+                <!-- Replace 'your-logo.png' with your logo file -->
+            </a>
+
+            <!-- Navbar toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto"> <!-- 'mx-auto' centers the nav items -->
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./Pages/visual_graphic_creation.html">Graphic Design</a>
+                            <a class="dropdown-item" href="./Pages/Video_Prodection.html">Video Production</a>
+                            <a class="dropdown-item" href="./Pages/web_development.html">Web development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/projects.html">Our Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Pages/contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Slider -->
+    <div id="carouselExample" class="carousel slide " data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExample" data-slide-to="1"></li>
+            <li data-target="#carouselExample" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('./Content/image1.jpg');">
+                <div class="overlay"></div>
+                <h1>Welcome to Our Website</h1>
+                <p>Discover our innovative services and solutions designed just for you.</p>
+                <a href="./Pages/about_us.html" class="btn">Read More</a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('./Content/image2.jpg');">
+                <div class="overlay"></div>
+                <h1>Explore Our Portfolio</h1>
+                <p>Our projects are crafted to exceed expectations and deliver quality.</p>
+                <a href="./Pages/projects.html" class="btn">Learn More</a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('./Content/image3.jpg');">
+                <div class="overlay"></div>
+                <h1>Join Us Today</h1>
+                <p>Become a part of our growing community and experience success together.</p>
+                <a href="./Pages/contact_us.html" class="btn">Join</a>
+            </div>
+        </div>
+        <!-- Left and Right controls -->
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Slider End -->
+
+    <!-- About Us -->
+
+    <section class="about-section">
+        <div class="about-content">
+            <h1 id="about-us">About Us</h1>
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="company">
+                        <img class="icons" src="./icons/company.png" width="20" height="20"> Our Company
+                    </div>
+                    <div class="tab" data-tab="vision">
+                        <img class="icons" src="./icons/vision.png" width="20" height="20"> Our Vision
+                    </div>
+                    <div class="tab" data-tab="mission">
+                        <img class="icons" src="./icons/mission.png" width="20" height="20"> Our Mission
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content active" id="company">
+                <h2>Our Company</h2>
+                <p>We are a passionate team dedicated to providing innovative solutions. We believe in building strong
+                    relationships with our clients and delivering exceptional results. Our focus is on quality,
+                    efficiency, and customer satisfaction. We strive to be the best in our industry.
+                </p>
+                <div class="about-image">
+                    <img src="./Content/about-us-page.png" loading="lazy" alt="About Us Image">
+                </div>
+            </div>
+            <div class="tab-content" id="mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is to empower businesses with cutting-edge technology and unparalleled service. We aim to
+                    help our clients achieve their goals by providing tailored solutions that meet their specific needs.
+                    We are committed to continuous improvement and exceeding expectations.</p>
+
+                <div class="about-image">
+                    <img src="./Content/our_mission.jpg" loading="lazy" alt="About Us Image">
+                </div>
+            </div>
+
+            <div class="tab-content" id="vision">
+                <h2>Our Vision</h2>
+                <p>Our vision is to be a global leader in providing innovative and sustainable solutions. We aspire to
+                    create a positive impact on the world by leveraging our expertise and passion. We are driven by a
+                    desire to make a difference and shape the future of our industry.</p>
+                <div class="about-image">
+                    <img src="./Content/our_vision.jpg" loading="lazy" alt="About Us Image">
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <!-- About Us End -->
+
+    <!-- Services -->
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 id="our-services">Our Services</h2>
+                    <p class="lead">We offer a wide range of services to meet your business needs. Our team is dedicated
+                        to providing high-quality solutions and exceptional customer service. We are committed to your
+                        success. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Graphic Design</h3>
+                        <p>Crafting compelling visuals, from remarkable graphics to stunning photos. </p>
+                        <a class="btn btn-primary" href="./Pages/visual_graphic_creation.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-code"></i>
+                        <h3>Video Production</h3>
+                        <p> Creating engaging video content for any platform.</p>
+                        <a class="btn btn-primary" href="./Pages/Video_Prodection.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Website Development</h3>
+                        <p>Our experienced developers create custom website tailored to your needs..</p>
+                        <a class="btn btn-primary" href="./Pages/web_development.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Services End -->
+
+    <!-- Projects -->
+
+    <section id="projects">
+        <h2>Our Projects</h2>
+
+        <div class="project-tab-container">
+            <div class="project-tabs">
+                <div class="project-tab active" data-filter="all">
+                    <img class="icons" src="./icons/all.png" width="20" height="20"> All
+                </div>
+                <div class="project-tab" data-filter="app">
+                    <img class="icons" src="./icons/image.png" width="20" height="20"> Images
+                </div>
+                <div class="project-tab" data-filter="branding">
+                    <img class="icons" src="./icons/video.png" width="20" height="20"> Videos
+                </div>
+                <div class="project-tab" data-filter="books">
+                    <img class="icons" src="./icons/website.png" width="20" height="20"> Website
+                </div>
+            </div>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project-item image-container" data-category="app">
+                <img src="./Content/graphic2.jpg" alt="Project 1">
+                <div class="overlay">
+                    <h3>Youtube Thumnail</h3>
+                    <a href="./Pages/thumbnail1.html">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-item image-container" data-category="branding">
+                <img src="./Content/Video1.jpg" alt="Project 2">
+                <div class="overlay">
+                    <h3>Video Edit</h3>
+                    <a href="./Pages/Video1.html">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="books">
+                <img src="./Content/web_development.jpg" alt="Project 3">
+                <div class="overlay">
+                    <h3>Web Development</h3>
+                    <a href="https://atccoinfra.in/">View Project</a>
+                </div>
+            </div>
+            <div class="project-item" data-category="app">
+                <img src="./Content/graphic1.jpg" alt="Project 4">
+                <div class="overlay">
+                    <h3>Graphics</h3>
+                    <a href="./Pages/thumbnail2.html">View Project</a>
+                </div>
+            </div>
+            <div class="project-item" data-category="branding">
+                <img src="./Content/video_production.jpg" alt="Project 5">
+                <div class="overlay">
+                    <h3>Viral Reels</h3>
+                    <a href="./Pages/Video2.html">View Project</a>
+                </div>
+            </div>
+            <div class="project-item" data-category="books">
+                <img src="./Content/Website1.jpg" alt="Project 6">
+                <div class="overlay">
+                    <h3>Website Design</h3>
+                    <a href="https://abhiboostin.framer.website/">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects End -->
+
+    <!-- Contact us -->
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-form">
+
+                        <form action="https://api.web3forms.com/submit" method="POST" id="form_css">
+                            <input type="hidden" name="access_key" value="79fbbf84-8693-4c21-b013-1bcef3045f4a">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" name="name" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-image">
+                        <img src="./Content/contact.png" alt="Contact Image">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact us end-->
+
+    <!-- Footer-->
+
+    <footer class="mt-auto py-3 bg-black">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>We create stunning videos, websites,<br> and graphics that elevate your brand.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: 101ritiksinha@gmail.com<br>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: white;">
+            <div class="footer-bottom">
+                &copy; 2023 Your Company Name. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms
+                    of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end-->
+
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
