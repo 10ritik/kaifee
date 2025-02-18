@@ -24,54 +24,58 @@ tabs.forEach(tab => {
 //about us end
 
 // projects
-
 const tabs1 = document.querySelectorAll('.project-tab');
 const projects = document.querySelectorAll('.project-item');
+const projectGrid = document.querySelector('.project-grid');
 
 tabs1.forEach(tab1 => {
     tab1.addEventListener('click', () => {
         const filter = tab1.dataset.filter;
-        
+
         tabs1.forEach(t => t.classList.remove('active'));
         tab1.classList.add('active');
 
-        let count = 0;
-        
         projects.forEach(project => {
             const category = project.dataset.category;
-            
+
             if (filter === 'all') {
                 project.style.display = 'block';
-            } else if (filter === category && count < 2) {
+            } else if (filter === category) {
                 project.style.display = 'block';
-                count++;
             } else {
                 project.style.display = 'none';
             }
         });
 
-        // ✅ Dynamically adjust columns based on screen width
-        const projectGrid = document.querySelector('.project-grid');
-        if (window.innerWidth <= 480) {
-            projectGrid.style.gridTemplateColumns = '1fr'; // Mobile: 1 column
-        } else if (window.innerWidth <= 768) {
-            projectGrid.style.gridTemplateColumns = 'repeat(2, 1fr)'; // Tablet: 2 columns
-        } else {
-            projectGrid.style.gridTemplateColumns = (filter === 'all') ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)'; // Default: 3 columns
+        // Responsive Grid Logic (using a function)
+        function updateGridColumns() {
+            let cols = 2; // Default number of columns
+
+            switch (filter) {
+                case 'all':
+                case 'branding':
+                    cols = 3;
+                    break;
+                case 'app':
+                case 'books':
+                    cols = 2;
+                    break;
+            }
+
+            if (window.innerWidth <= 768) { // Adjust breakpoint as needed
+                cols = Math.min(cols, 2); // Max 2 columns on smaller screens
+            }
+            if (window.innerWidth <= 480) { // Adjust breakpoint as needed
+                cols = 1; // 1 column on very small screens
+            }
+
+            projectGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
         }
+
+        updateGridColumns(); // Call initially and on filter change
+
+        window.addEventListener('resize', updateGridColumns); // Update on window resize
     });
-});
-
-
-window.addEventListener('resize', () => {
-    const projectGrid = document.querySelector('.project-grid');
-    if (window.innerWidth <= 480) {
-        projectGrid.style.gridTemplateColumns = '1fr';
-    } else if (window.innerWidth <= 768) {
-        projectGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    } else {
-        projectGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    }
 });
 
 //project end
