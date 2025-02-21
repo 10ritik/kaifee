@@ -6,10 +6,16 @@
 }
 /* Variable */
 :root {
-    --background:#F7F7FF;
-    --text: #0C090D;
-    --buttons: #00A8E8;
+    /* --background:#212529;
+    --text: #F3EFE0;
+    --buttons: #7D8CA3;
+    --button2: #007bff; */
+    --background:#0D1117;
+    --text: #F3EFE0;
+    --buttons: #736F72;
     --button2: #007bff;
+    --contact:#3D3D3D;
+    --contact_text:#
   }
 /*Background colors*/
 
@@ -220,7 +226,7 @@
 
 .icons{
     margin-right: 5px;
-      
+    filter: invert(80%);
     box-shadow: none;
   }
 
@@ -252,7 +258,7 @@
   
   .tab.active {
     .icons{
-     
+        
       transition: filter 0.3s ease;
       }
     background-color:  var(--background);
@@ -275,7 +281,7 @@
     align-items: center;
     max-width: 720px;/*Changes*/
     margin: 0 auto; 
-    background-color: var(--buttons);
+    background-color: var(--contact);
     padding: 20px;
     border-radius: 7px;
     margin-top: 50px;
@@ -284,7 +290,7 @@
 
 .tab-content h2 {
     margin-bottom: 10px;
-    color: var(--background);
+    color: var(--text);
 }
 
 .tab-content p {
@@ -373,7 +379,7 @@
     border-radius: 8px; /* Rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     color: white;
-    background-color: var(--buttons);
+    background-color: var(--contact);
 }
 
 .service-box:hover{
@@ -384,7 +390,7 @@
     margin-bottom: 20px; /* Space between boxes */
     border-radius: 8px; /* Rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    color: black;
+    color: white;
     background-color: var(--background);
     transform: translateY(-5px); /* Move box up slightly on hover */
     box-shadow: none; /* Add a subtle shadow on hover */
@@ -410,7 +416,7 @@
 
 .service-box h3 {
     margin-bottom: 10px; /* Space between heading and paragraph */
-    color: var(--background);
+    color: var(--text);
 }
 
 .service-box p {
@@ -428,7 +434,6 @@
 }
 
 .btn-light:hover {
-    background-color: var(--button2);
     color: var(--background);
     transform: translateY(-5px);
     transform: scale(1.1);
@@ -479,14 +484,16 @@
 
 .project-tab:hover{
     .icons{  
-        transition: filter 0.3s ease;
+        filter:invert(100%);
+        transition:filter 0.3s ease;
         }
-        background-color:  var(--background);
-        border-radius: 50px;
+        background-color:var(--background);
+        border-radius:50px;
 }
 
 .project-tab.active {
     .icons{
+        filter: invert(100);
         transition: filter 0.3s ease;
         }
       background-color:  var(--background);
@@ -539,7 +546,7 @@
 .overlay h3 {
     margin-bottom: 10px;
     background-color: transparent;
-    color:var(--background);
+    color:var(--text);
 }
 
 .overlay a {
@@ -593,7 +600,7 @@
 
 .project-grid {
     max-width: 1200px;
-    background-color:var(--buttons); 
+    background-color:var(--contact); 
     padding: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -652,7 +659,7 @@
 }
 
 .contact-form {
-   
+    background-color: var(--contact);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -663,17 +670,19 @@
 }
 
 .form-control {
-    /* background-color: #282828; */
+    background-color: #B8B8B8;
     border-color:  var(--background);
-    color:  var(--text);
+    color:  var(--background);
     border: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .form-control:focus {
     /* background-color: #282828; */
     border-color: var(--button2);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    color: var(--text);
+    color: black;
+
 }
 
 .btn-primary {
